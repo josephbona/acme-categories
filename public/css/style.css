@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+.nav-tabs {
+    background: #4285f4;
+    border-bottom: 2px solid #1976D2;
+}
+.nav-tabs > li > a {
+    border: none;
+    color: #fff;
+    font-size: 16px;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    outline: none;
+    background: none;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+    border-width: 0;
+    color: #fff;
+    background: none;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li > a:hover {
+    border: none;
+    background: none;
+}
+.nav-tabs > li > a::after {
+    content: "";
+    background: #fff;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+.nav-tabs > li.active > a::after,
+.nav-tabs > li:hover > a::after {
+    transform: scale(1);
+}
+.tab-nav > li > a::after {
+    background: #21527d;
+    color: #fff;
+}
+.tab-pane {
+    padding: 15px 0;
+}
+.tab-content{
+    padding:20px;
+}
+.tab-content h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    position: relative;
+}
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+.card .form {
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.card .input-container {
+  position: relative;
+}
+.card .input-container input {
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background: none;
+  width: 100%;
+  height: 54px;
+  border: 0;
+  color: #212121;
+  font-size: 20px;
+  font-weight: 400;
+}
+.card .input-container input:focus ~ label {
+  color: #9d9d9d;
+  -webkit-transform: translate(-12%, -50%) scale(0.75);
+          transform: translate(-12%, -50%) scale(0.75);
+}
+.card .input-container input:focus ~ .bar:before,
+.card .input-container input:focus ~ .bar:after {
+  width: 50%;
+}
+.card .input-container input:valid ~ label {
+  color: #9d9d9d;
+  -webkit-transform: translate(-12%, -50%) scale(0.75);
+          transform: translate(-12%, -50%) scale(0.75);
+}
+.card .input-container label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 60px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.card .input-container .bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #aaa;
+  width: 100%;
+  height: 1px;
+}
+.card .input-container .bar:before,
+.card .input-container .bar:after {
+  content: '';
+  position: absolute;
+  background: #4285f4;
+  width: 0;
+  height: 2px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+.card .input-container .bar:before {
+  left: 50%;
+}
+.card .input-container .bar:after {
+  right: 50%;
+}
+.card .button-container {
+  text-align: center;
+}
+.card .button-container button {
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: 0;
+  width: 100%;
+  border: 2px solid #bbb;
+  padding: 13px 0;
+  font-size: 24px;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.card .button-container button span {
+  position: relative;
+  z-index: 1;
+  color: #bbb;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.card .button-container button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background: #4285f4;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: -15px 0 0 -15px;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.card .button-container button:hover,
+.card .button-container button:active,
+.card .button-container button:focus {
+  border-color: #4285f4;
+}
+.card .button-container button:hover span,
+.card .button-container button:active span,
+.card .button-container button:focus span {
+  color: #4285f4;
+}
+.card .button-container button:active span,
+.card .button-container button:focus span {
+  color: #ffffff;
+}
+.card .button-container button:active:before,
+.card .button-container button:focus:before {
+  opacity: 1;
+  -webkit-transform: scale(10);
+  transform: scale(10);
+}
+.list-group {
+  border-radius: 0;
+}
+.list-group-item {
+  line-height: 30px;
+}
+.list-group-item form {
+  float: right;
+}
+.list-group-item button {
+}
+@media screen and (min-width: 768px) {
+    body {
+        padding: 50px;
+    }
+    .container {
+        max-width: 730px;
+    }
+}
+@media screen and (min-width: 450px) {}

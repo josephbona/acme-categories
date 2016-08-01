@@ -1,0 +1,31 @@
+{% extends './layout.html' %}
+{% block content %}
+  <h1>{{ title }}</h1>
+  <form class="form" action="/categories/{{ title }}/products" method="post">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="input-container">
+          <input type="text" name="name" id="name" required="required"/>
+          <label for="name">Product Name</label>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="button-container">
+          <button type="submit"><span>Add</span></button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <hr>
+  <ul class="list-group">
+    {% for product in products %}
+    <li class="list-group-item">
+      {{product.name}}
+      <form action="/categories/{{ title }}/products/{{loop.index0}}?_method=delete" method="post">
+        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+      </form>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
